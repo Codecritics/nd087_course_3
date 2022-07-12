@@ -1,17 +1,6 @@
 #!/bin/bash
 
-DEPLOY_INCREMENTS=2
-
-function manual_verification {
-  read -p "Continue deployment? (y/n) " answer
-
-    if [[ $answer =~ ^[Yy]$ ]] ;
-    then
-        echo "continuing deployment"
-    else
-        exit
-    fi
-}
+DEPLOY_INCREMENTS=1
 
 function canary_deploy {
   NUM_OF_V1_PODS=$(kubectl get pods -n udacity | grep -c canary-v1)
@@ -32,15 +21,22 @@ function canary_deploy {
   echo "Canary deployment of $DEPLOY_INCREMENTS replicas successful!"
 }
 
-# Initialize canary-v2 deployment
+# Initial canary-v2 deployment
+kubectl apply -f index_v2_html.yml
 kubectl apply -f canary-v2.yml
 
 sleep 1
 # Begin canary deployment
-while [ "$(kubectl get pods -n udacity | grep -c canary-v1)" -gt 0 ]
+while [ "$(kubectl get pods -n udacity | grep -c canary-v1)" -ne "$(kubectl get pods -n udacity | grep -c canary-v2)" ]
 do
   canary_deploy
-  manual_verification
 done
+
+
+
+NUM_OF_V1_PODS=$(kubectl get pods -n udacity | grep -c canary-v1)
+echo "V1 PODS: $NUM_OF_V1_PODS"
+NUM_OF_V2_PODS=$(kubectl get pods -n udacity | grep -c canary-v2)
+echo "V2 PODS: $NUM_OF_V2_PODS"
 
 echo "Canary deployment of v2 successful"
