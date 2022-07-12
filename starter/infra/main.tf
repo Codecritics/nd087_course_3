@@ -1,7 +1,7 @@
 locals {
   account_id = data.aws_caller_identity.current.account_id
 
-  name   = "mtanawa-deployment-roulette"
+  name   = "udacity"
   region = "us-east-2"
   tags = {
     Name      = local.name
