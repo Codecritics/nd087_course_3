@@ -1,0 +1,21 @@
+codecriticsamalto@MBP-de-Marius-2  ~/Documents/Personnel/projets/Deployment Roulette   master ✚ ●  k get po                                                                                                                                         ✔  10178  00:26:20
+NAME                                  READY   STATUS    RESTARTS   AGE
+bloaty-mcbloatface-58c98b98d8-4v7b5   1/1     Running   0          23m
+bloaty-mcbloatface-58c98b98d8-5d84k   1/1     Running   0          23m
+bloaty-mcbloatface-58c98b98d8-5pgvd   1/1     Running   0          23m
+bloaty-mcbloatface-58c98b98d8-67ttw   1/1     Running   0          23m
+bloaty-mcbloatface-58c98b98d8-7vs6h   1/1     Running   0          23m
+bloaty-mcbloatface-58c98b98d8-ccz4z   1/1     Running   0          23m
+bloaty-mcbloatface-58c98b98d8-dcrpc   1/1     Running   0          23m
+bloaty-mcbloatface-58c98b98d8-frpzv   1/1     Running   0          23m
+bloaty-mcbloatface-58c98b98d8-fwws2   1/1     Running   0          23m
+bloaty-mcbloatface-58c98b98d8-jl4c2   1/1     Running   0          23m
+bloaty-mcbloatface-58c98b98d8-kr2s4   1/1     Running   0          23m
+bloaty-mcbloatface-58c98b98d8-ljxxd   1/1     Running   0          23m
+bloaty-mcbloatface-58c98b98d8-lskvx   1/1     Running   0          23m
+bloaty-mcbloatface-58c98b98d8-mng8f   1/1     Running   0          23m
+bloaty-mcbloatface-58c98b98d8-nnd2t   1/1     Running   0          23m
+bloaty-mcbloatface-58c98b98d8-w4pgg   1/1     Running   0          23m
+bloaty-mcbloatface-58c98b98d8-zn4jc   1/1     Running   0          23m
+debug                                 1/1     Running   0          4h30m
+hello-world-794458d64d-qxx5g          1/1     Running   0          8h
